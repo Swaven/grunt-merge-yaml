@@ -54,11 +54,37 @@ grunt.initConfig({
 });
 ```
 
+Example:
+
+*base.yaml*:
+```js
+  db: 'dev db connection'
+  misc:
+    foo: true
+    bar: 'value'
+```
+
+and *target.yaml*:
+```js
+  db: 'prod db connection'
+  misc:
+    foo: false
+    baz: 32
+```
+
+are merged into *combined.yaml*:
+```js
+  db: 'prod db connection' // from target
+  misc:
+    foo: false // from target
+    bar: 'value' // from base
+    baz: 32 // from target
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 
-* 2016-03-10: [v1.0.0](https://github.com/Swaven/grunt-merge-yaml/releases/tag/v1.0.0): object keys defined in 2nd file only are added
+* 2016-03-10: [v1.0.1](https://github.com/Swaven/grunt-merge-yaml/releases/tag/v1.0.1): object keys defined in 2nd file only are added
 * 2016-03-08: [v0.1.0](https://github.com/Swaven/grunt-merge-yaml/releases/tag/v0.1.0): first release

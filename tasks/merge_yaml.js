@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         mergedConfig = explore(baseConfig, config),
         mergedContent = yaml.safeDump(mergedConfig); // Serialize object as YAML
 
-        grunt.file.write('config/config.compiled.yml', mergedContent, {encoding: 'utf-8'});
-        grunt.log.ok('created config/config.compiled.yml');
+        grunt.file.write(dest, mergedContent, {encoding: 'utf-8'});
+        grunt.log.ok('created ' + dest);
   });
 };
