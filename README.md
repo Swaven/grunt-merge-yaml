@@ -86,5 +86,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+* 2016-03-17: [v1.0.2](https://github.com/Swaven/grunt-merge-yaml/releases/tag/v1.0.2): fix js-yaml reference bug
 * 2016-03-10: [v1.0.1](https://github.com/Swaven/grunt-merge-yaml/releases/tag/v1.0.1): object keys defined in 2nd file only are added
 * 2016-03-08: [v0.1.0](https://github.com/Swaven/grunt-merge-yaml/releases/tag/v0.1.0): first release

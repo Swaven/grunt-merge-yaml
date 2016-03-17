@@ -64,9 +64,8 @@ module.exports = function(grunt) {
         baseFile = this.data.base,
         target = this.data.target,
         dest = this.data.dest,
-        // file = 'config/config.' + target + '.yml',
-        baseConfig = grunt.file.readYAML(baseFile),
-        config = grunt.file.readYAML(target),
+        baseConfig = yaml.safeLoad(fs.readFileSync(baseFile, 'utf8')),
+        config = yaml.safeLoad(fs.readFileSync(target, 'utf8')),
         mergedConfig = explore(baseConfig, config),
         mergedContent = yaml.safeDump(mergedConfig); // Serialize object as YAML
 
