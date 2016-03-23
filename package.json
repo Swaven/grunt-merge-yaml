@@ -1,7 +1,7 @@
 {
   "name": "grunt-merge-yaml",
   "description": "Merge together 2 yaml files",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/Swaven/grunt-merge-yaml",
   "author": {
     "name": "Swaven"
@@ -35,7 +35,8 @@
     "grunt": ">=0.4.5"
   },
   "keywords": [
-    "gruntplugin yaml"
+    "gruntplugin",
+    "yaml"
   ],
   "dependencies": {
     "js-yaml": "^3.5.3"
